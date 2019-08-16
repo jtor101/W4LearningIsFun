@@ -15,18 +15,22 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" src="/public/css/site.css" type="text/css" />
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
 
-    <title>Continuing Education - Course Registration</title>
+    <title>Tri-City Community Center - Course Registration</title>
   </head>
   <body class="container-fluid bg-light">
+    <!-- Header -->
     <header>
       <h1 class="text-center py-5 bg-success">
-        Continuing Education - Course Registration
+        Tri-City Community Center - Course Registration
       </h1>
     </header>
+
     <div class="row">
       <div class="col-6 offset-3">
+        <!-- Registration Form -->
+        <!-- Prefilled Course ID -->
         <form id="courseReg">
           <label for="courseid">Course ID:</label>
           <input
@@ -36,27 +40,39 @@
             id="courseid"
             readonly
           />
+          <!-- Student Name -->
           <label for="studentName">Student Name: </label>
           <input
             type="text"
             class="form-control"
             name="studentname"
             id="studentName"
+            required
           />
+          <!-- Student Email -->
           <label for="studentEmail">Student Email: </label>
           <input
             type="email"
             class="form-control"
             name="email"
             id="studentEmail"
+            required
           />
         </form>
 
+        <!-- Submit button -->
         <input type="submit" class="btn btn-success py-3 mt-5" id="submitBtn" />
+        <!-- Back to class details of class being viewed -->
         <a class="btn btn-warning mt-5" id="backBtn">Back To Class Details</a>
+        <!-- Button leads back to index.html -->
         <a class="btn btn-primary py-3 mt-5" href="index.html">Back To Home</a>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-3 py-3 bg-secondary">
+      John Torres - HartCode 2019
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

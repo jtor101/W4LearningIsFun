@@ -15,18 +15,22 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" src="/public/css/site.css" type="text/css" />
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
 
-    <title>Continuing Education - Courses</title>
+    <title>Tri-City Community Center - Courses</title>
   </head>
   <body class="container-fluid bg-light">
+    <!-- Header -->
     <header>
       <h1 class="text-center py-5 bg-success">
-        Continuing Education - Courses
+        Tri-City Community Center - Courses
       </h1>
     </header>
+
     <div class="row">
       <div class="col-8 offset-2">
+        <!-- Radio Buttons, hides/shows dropdown -->
+        <!-- Show All Classes -->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -39,6 +43,7 @@
             Show All Classes
           </label>
         </div>
+        <!-- Search By Category -->
         <div class="form-check">
           <input
             class="form-check-input"
@@ -52,8 +57,10 @@
           </label>
         </div>
 
+        <!-- Category Dropdown -->
         <select class="form-control" id="categorySelector"> </select>
 
+        <!-- Course Display table -->
         <table
           class="table bg-white my-5 text-center table-bordered table-striped table-hover"
         >
@@ -68,9 +75,15 @@
           <tbody id="courseTable"></tbody>
         </table>
 
+        <!-- Back to index.html -->
         <a class="btn btn-primary" href="index.html">Back To Home</a>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-3 py-3 bg-secondary">
+      John Torres - HartCode 2019
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
