@@ -1,0 +1,12 @@
+body {
+    background-color: lightsteelblue;
+}
+
+header {
+    background-color: darkgoldenrod;
+}
+
+#indexDescription {
+    background-color: silver;
+    border: 3px ridge darkgray;
+}
