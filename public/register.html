@@ -19,20 +19,46 @@
 
     <title>Continuing Education - Course Registration</title>
   </head>
-  <body class="container-fluid">
+  <body class="container-fluid bg-light">
     <header>
-      <h1 class="text-center py-5">
+      <h1 class="text-center py-5 bg-success">
         Continuing Education - Course Registration
       </h1>
     </header>
-
     <div class="row">
-      <div class="col-8 offset-2">
-        <a class="btn btn-primary" href="index.html">Back To Home</a>
+      <div class="col-6 offset-3">
+        <form id="courseReg">
+          <label for="courseid">Course ID:</label>
+          <input
+            type="text"
+            class="form-control"
+            name="courseid"
+            id="courseid"
+            readonly
+          />
+          <label for="studentName">Student Name: </label>
+          <input
+            type="text"
+            class="form-control"
+            name="studentname"
+            id="studentName"
+          />
+          <label for="studentEmail">Student Email: </label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="studentEmail"
+          />
+        </form>
+
+        <input type="submit" class="btn btn-success py-3 mt-5" id="submitBtn" />
+        <a class="btn btn-warning mt-5" id="backBtn">Back To Class Details</a>
+        <a class="btn btn-primary py-3 mt-5" href="index.html">Back To Home</a>
       </div>
     </div>
 
-   <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

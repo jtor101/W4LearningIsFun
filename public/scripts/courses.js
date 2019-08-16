@@ -1,9 +1,57 @@
 "use strict";
 
 $(function() {
-  // Populates dropdown
-  let categorySelector = $("#categorySelector");
 
+    // Radio Buttons
+  let categoryRB = $("#byCategory");
+  let showAllRB = $("#showAll");
+    // Dropdown
+  let categorySelector = $("#categorySelector");
+    // Table
+  let tableBody = $("#courseTable");
+
+  // Sets dropdown to hidden on load
+  categorySelector.css("visibility", "hidden");
+
+  // Turns on dropdown when "Search By Category" is selected
+  categoryRB.on("change", function() {
+    categorySelector.css("visibility", "visible");
+    tableBody.empty(); // Clears table of previous selection.
+    catFillTable();
+  });
+
+  // Turns off dropdown when "Show All Classes" is selected
+  showAllRB.on("change", function() {
+    categorySelector.css("visibility", "hidden");
+
+    tableBody.empty(); // Clears table of previous selection.
+
+    // Populates table with all courses.
+    $.getJSON("/api/courses", function(data) {
+        let courses = data;
+        for (let i = 0; i < courses.length; i++) {
+            let courseId = courses[i].CourseId;
+            let courseTitle = courses[i].Title;
+            let courseLoc = courses[i].Location;
+  
+            let markup =
+              "<tr><td>" +
+              courseId +
+              "</td><td class='font-italic'>" +
+              courseTitle +
+              "</td><td>" +
+              courseLoc +
+              "</td><td>" +
+              "<a href='details.html?courseid=" +
+              courseId +
+              "'>Details</a></td></tr>";
+  
+            tableBody.append(markup);
+        }
+    })
+  });
+
+  // Populates dropdown with categories.
   $.getJSON("/api/categories", function(data) {
     let categories = data;
 
@@ -16,14 +64,17 @@ $(function() {
     }
   });
 
-  categorySelector.on("change", function() {
+  // Populates table with courses that match selection.
+  categorySelector.on("change", catFillTable)
+  
+  function catFillTable() {
+    $.getJSON(
+      "/api/courses/bycategory/" + $("#categorySelector").val(),
+      function(data) {
+        let courses = data;
+        tableBody.empty(); // Clears table of previous selection.
 
-  $.getJSON("/api/courses/bycategory/" + $("#categorySelector").val(), function(data) {
-    let courses = data;
-      let tableBody = $("#courseTable");
-      tableBody.empty();
-
-      for (let i = 0; i < courses.length; i++) {
+        for (let i = 0; i < courses.length; i++) {
           let courseId = courses[i].CourseId;
           let courseTitle = courses[i].Title;
           let courseLoc = courses[i].Location;
@@ -31,7 +82,7 @@ $(function() {
           let markup =
             "<tr><td>" +
             courseId +
-            "</td><td>" +
+            "</td><td class='font-italic'>" +
             courseTitle +
             "</td><td>" +
             courseLoc +
@@ -41,8 +92,8 @@ $(function() {
             "'>Details</a></td></tr>";
 
           tableBody.append(markup);
+        }
       }
-      
-    });
-  });
+    );
+  };
 });

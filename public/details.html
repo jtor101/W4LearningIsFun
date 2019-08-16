@@ -1,44 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" src="/public/css/site.css" type="text/css" />
 
-    <title>GCC - Continuing Education - Course Details</title>
+    <title>Continuing Education - Course Details</title>
   </head>
-  <body class="container-fluid">
-        <header>
-          <h1 class="text-center py-5">Continuing Education - Course Details</h1>
-        </header>
+  <body class="container-fluid bg-light">
+    <header>
+      <h1 class="text-center py-5 bg-success">Continuing Education - Course Details</h1>
+    </header>
+    <div class="row">
+      <div class="col-8 offset-2">
+        <table class="table bg-white my-5 text-center table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>Course ID:</th>
+              <th>Course Title:</th>
+              <th>Category:</th>
+              <th>Location:</th>
+              <th>Start Date:</th>
+              <th>End Date:</th>
+              <th>Meets:</th>
+              <th>Fee:</th>
+            </tr>
+          </thead>
+          <tbody id="courseTable"></tbody>
+        </table>
 
-        <table class="table bg-white my-5 text-center">
-            <thead>
+        <table class="table bg-white my-5 text-center table-bordered table-hover">
+            <thead class="thead-dark">
               <tr>
-                <th>Course ID:</th>
-                <th>Course Title:</th>
-                <th>Category:</th>
-                <th>Location:</th>
-                <th>Start Date:</th>
-                <th>End Date:</th>
-                <th>Meets:</th>
-                <th>Fee:</th>
+                <th>Student Name:</th>
+                <th>Student Email:</th>
               </tr>
             </thead>
-            <tbody id="courseTable"></tbody>
+            <tbody id="studentTable"></tbody>
           </table>
 
-        <div class="row">
-          <div class="col-8 offset-2">
-            <a class="btn btn-primary" href="index.html">Back To Home</a>
-          </div>
-        </div>
+        <a class="btn btn-success" href="register.html" id="regBtn">Register</a>
 
-<!-- Optional JavaScript -->
+        <a class="btn btn-warning py-3" href="courses.html">Back To Courses</a>
+        <a class="btn btn-primary py-3" href="index.html">Back To Home</a>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
