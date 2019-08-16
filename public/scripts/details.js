@@ -55,7 +55,8 @@ $(function() {
     }
 
     // Brings user to Registration page with Course ID prefilled.
-    regBtn.html( // This dynamic html triggers an error that I did not have time to figure out.  Apologies.
+    regBtn.html(
+      // This dynamic html triggers an error that I did not have time to figure out.  Apologies.
       "<a class='btn btn-success py-3' href='register.html?courseid=" +
         courseId +
         "'>Register</a>"

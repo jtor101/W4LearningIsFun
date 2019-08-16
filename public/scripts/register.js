@@ -17,7 +17,8 @@ $(function() {
   courseIdInput.val(courseId);
 
   // loads Course ID into Back to Class Details input.
-  backBtn.html(// This dynamic html triggers an error that I did not have time to figure out.  Apologies.
+  backBtn.html(
+    // This dynamic html triggers an error that I did not have time to figure out.  Apologies.
     "<a class='btn btn-warning py-2' href='details.html?courseid=" +
       courseId +
       "'>Back To Class Details</a>"
