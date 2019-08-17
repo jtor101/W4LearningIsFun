@@ -27,8 +27,9 @@ $(function() {
   // Submit Button sends form.
   submitBtn.on("click", sendForm);
 
-  // Posts to Students.
+  // Posts to Students table.
   function sendForm() {
+    alert("Sent!");
     $.post("api/register", courseReg.serialize());
     return false;
   }
