@@ -2,7 +2,6 @@ header {
   box-shadow: 10px 10px;
 }
 
-
 #indexDescription {
   border: 3px ridge darkgrey;
   box-shadow: 10px 10px;
@@ -14,4 +13,8 @@ header {
 
 img {
   box-shadow: 10px 10px;
+}
+
+h2 {
+  font-size: 1.6em;
 }
