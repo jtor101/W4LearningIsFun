@@ -4,10 +4,13 @@ $(function() {
   // Gets courseid from query
   let urlParams = new URLSearchParams(location.search);
   let courseId = urlParams.get("courseid");
+
   // Course Details Table
   let courseTable = $("#courseTable");
+
   // Student Details Table
   let studentTable = $("#studentTable");
+
   // Register button
   let regBtn = $("#regBtn");
 
@@ -39,7 +42,7 @@ $(function() {
       classEnd +
       "</td><td>" +
       classMeets +
-      "</td><td>" +
+      "</td><td>$" +
       classFee +
       "</td></tr>";
 
@@ -50,16 +53,15 @@ $(function() {
       let studentName = courses.Students[i].StudentName;
       let studentEmail = courses.Students[i].Email;
       let studentMarkup =
-        "<tr><td>" + studentName + "</td><td>" + studentEmail + "</td></tr>";
+        "<tr><td>" +
+        studentName +
+        "</td><td>" +
+        studentEmail +
+        "</td><td><a class='btn btn-danger'>Delete</a></td></tr>";
       studentTable.append(studentMarkup);
     }
 
     // Brings user to Registration page with Course ID prefilled.
-    regBtn.html(
-      // This dynamic html triggers an error in validation that I have not figured out yet.
-      "<a class='btn btn-success py-3' href='register.html?courseid=" +
-        courseId +
-        "'>Register</a>"
-    );
+    regBtn.attr("href", "register.html?courseid=" + courseId);
   });
 });

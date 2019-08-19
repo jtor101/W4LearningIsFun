@@ -41,7 +41,7 @@ $(function() {
           "</td><td>" +
           courseLoc +
           "</td><td>" +
-          "<a href='details.html?courseid=" +
+          "<a class='btn btn-success' href='details.html?courseid=" +
           courseId +
           "'>Details</a></td></tr>";
 
@@ -88,7 +88,7 @@ $(function() {
             "</td><td>" +
             courseLoc +
             "</td><td>" +
-            "<a href='details.html?courseid=" +
+            "<a class='btn btn-success' href='details.html?courseid=" +
             courseId +
             "'>Details</a></td></tr>";
 
