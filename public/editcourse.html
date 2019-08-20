@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+
+    <title>Tri-City Community Center - Edit Course</title>
+  </head>
+  <body class="container-fluid bg-light">
+    <!-- Header -->
+    <header>
+      <h1 class="text-center py-5 bg-success">
+        Tri-City Community Center - Edit Course
+      </h1>
+    </header>
+
+    <div class="row mt-5">
+      <div class="col-6 offset-3">
+        <h2 class="text-center">Enter Course Details</h2>
+
+        <form id="courseEdit">
+          <div class="form-group">
+            <label for="courseid">Course ID:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="courseid"
+              id="courseid"
+              minlength="6"
+              placeholder="Enter course ID"
+              readonly
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="coursetitle">Course Title:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="title"
+              id="coursetitle"
+              minlength="6"
+              placeholder="Enter course title"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="coursecategory">Category:</label>
+            <select
+              class="form-control"
+              name="category"
+              id="coursecategory"
+              placeholder="Enter category"
+              required
+            >
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="courselocation">Location:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="location"
+              id="courselocation"
+              minlength="5"
+              placeholder="Enter location"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="coursestartdt">Start Date:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="startdate"
+              id="coursestartdt"
+              placeholder="Enter start date"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="courseenddt">End Date:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="enddate"
+              id="courseenddt"
+              placeholder="Enter end date"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="coursestartdt">Meets:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="meets"
+              id="coursemeets"
+              placeholder="Enter meeting days/times"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="coursefee">Fee:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="fee"
+              id="coursefee"
+              placeholder="Enter course fee"
+              required
+            />
+          </div>
+
+          <button type="submit" id="ceSubmitBtn" class="btn btn-success mt-2">
+            Submit
+          </button>
+        </form>
+        <!-- Back to class details of class being viewed -->
+        <a class="btn btn-warning py-3 mt-5" href="courses.html">
+          Back To Courses</a
+        >
+        <!-- Button leads back to index.html -->
+        <a class="btn btn-primary py-3 mt-5" href="index.html">Back To Home</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-3 py-3 bg-success">
+      John Torres - HartCode 2019
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/editcourse.js"></script>
+  </body>
+</html>

@@ -99,7 +99,7 @@ app.get("/register.html", function(req, res) {
   res.sendFile(__dirname + "/public/" + "register.html");
 });
 
-/* THIS CODE ALLOWS REQUESTS FOR THE PAGES THROUGH */
+/* THIS CODE ALLOWS REQUESTS FOR THE API THROUGH */
 
 // GET CATEGORIES
 

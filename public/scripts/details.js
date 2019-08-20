@@ -61,7 +61,8 @@ $(function() {
       studentTable.append(studentMarkup);
     }
 
-    // Brings user to Registration page with Course ID prefilled.
+    // Brings user to Registration or Edit page with Course ID prefilled.
+    $("#editBtn").attr("href", "editcourse.html?courseid=" + courseId);
     regBtn.attr("href", "register.html?courseid=" + courseId);
   });
 });

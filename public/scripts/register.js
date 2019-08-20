@@ -24,11 +24,11 @@ $(function() {
   backBtn.attr("href", "details.html?courseid=" + courseId);
 
   // Submit Button sends form.
-  submitBtn.on("submit", sendForm);
+  submitBtn.on("click", sendForm);
 
   // Posts to Students table.
   function sendForm() {
-    alert("Sent!");
+    alert("Registered!");
     $.post("api/register", courseReg.serialize());
     window.location.replace("details.html?courseid=" + courseId);
     return false;
