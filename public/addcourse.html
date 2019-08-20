@@ -41,8 +41,8 @@
               id="courseid"
               minlength="6"
               placeholder="Enter course ID"
-              required
             />
+            <div id="courseiderror"></div>
           </div>
 
           <div class="form-group">
@@ -54,8 +54,8 @@
               id="coursetitle"
               minlength="6"
               placeholder="Enter course title"
-              required
             />
+            <div id="coursetitleerror"></div>
           </div>
 
           <div class="form-group">
@@ -65,7 +65,6 @@
               name="category"
               id="coursecategory"
               placeholder="Enter category"
-              required
             >
             </select>
           </div>
@@ -79,8 +78,8 @@
               id="courselocation"
               minlength="5"
               placeholder="Enter location"
-              required
             />
+            <div id="courselocationerror"></div>
           </div>
 
           <div class="form-group">
@@ -91,8 +90,8 @@
               name="startdate"
               id="coursestartdt"
               placeholder="Enter start date"
-              required
             />
+            <div id="coursestartdterror"></div>
           </div>
 
           <div class="form-group">
@@ -103,8 +102,8 @@
               name="enddate"
               id="courseenddt"
               placeholder="Enter end date"
-              required
             />
+            <div id="courseenddterror"></div>
           </div>
 
           <div class="form-group">
@@ -115,8 +114,7 @@
               name="meets"
               id="coursemeets"
               placeholder="Enter meeting days/times"
-              required
-            />
+            /><div id="coursemeetserror"></div>
           </div>
 
           <div class="form-group">
@@ -127,13 +125,13 @@
               name="fee"
               id="coursefee"
               placeholder="Enter course fee"
-              required
-            />
+            /><div id="coursefeeerror"></div>
           </div>
 
-          <button type="submit" id="caSubmitBtn" class="btn btn-success mt-2">
+          <button type="button" id="caSubmitBtn" class="btn btn-success mt-2">
             Submit
           </button>
+          <div id="errors"></div>
         </form>
         <!-- Back to class details of class being viewed -->
         <a class="btn btn-warning py-3 mt-5" href="courses.html">

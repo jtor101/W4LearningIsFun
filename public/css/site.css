@@ -18,3 +18,10 @@ img {
 h2 {
   font-size: 1.6em;
 }
+
+form div div {
+  color: red;
+  font-weight: bold;
+  background-color: lightgrey;
+  text-align: center;
+}
