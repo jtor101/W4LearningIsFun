@@ -19,7 +19,7 @@ h2 {
   font-size: 1.6em;
 }
 
-form div div {
+form div div, #studentNameError, #studentEmailError {
   color: red;
   font-weight: bold;
   background-color: lightgrey;

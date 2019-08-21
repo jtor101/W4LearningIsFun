@@ -32,18 +32,86 @@ $(function() {
   });
   // End $.getJSON
 
+  // Input Validation
+  function inputVal() {
+    $("form div div").empty();
+
+    if (
+      $("#courseid")
+        .val()
+        .trim() == ""
+    ) {
+      $("#courseiderror").text("Course ID required");
+      return false;
+    }
+    if (
+      $("#coursetitle")
+        .val()
+        .trim() == ""
+    ) {
+      $("#coursetitleerror").text("Course Title required");
+      return false;
+    }
+    if (
+      $("#courselocation")
+        .val()
+        .trim() == ""
+    ) {
+      $("#courselocationerror").text("Course Location required");
+      return false;
+    }
+    if (
+      $("#coursestartdt")
+        .val()
+        .trim() == ""
+    ) {
+      $("#coursestartdterror").text("Start Date required");
+      return false;
+    }
+    if (
+      $("#courseenddt")
+        .val()
+        .trim() == ""
+    ) {
+      $("#courseenddterror").text("End Date required");
+      return false;
+    }
+    if (
+      $("#coursemeets")
+        .val()
+        .trim() == ""
+    ) {
+      $("#coursemeetserror").text("Meeting Time required");
+      return false;
+    }
+    if (
+      $("#coursefee")
+        .val()
+        .trim() == ""
+    ) {
+      $("#coursefeeerror").text("Course Fee required");
+      return false;
+    }
+  }
+
   // Submit Button sends form.
   $("#ceSubmitBtn").on("click", sendForm);
 
   // PUT
   function sendForm() {
-    $.ajax({
-      url: "/api/courses",
-      method: "PUT",
-      data: $("#courseEdit").serialize(),
-      success: function(){alert("Updated!");
+    let isOk = inputVal();
+    if (isOk == false) {
+      return;
+    } else {
+      $.ajax({
+        url: "/api/courses",
+        method: "PUT",
+        data: $("#courseEdit").serialize(),
+        success: function() {
+          alert("Updated!");
+        }
+      });
     }
-    });
     //return false;
   }
 });

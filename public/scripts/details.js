@@ -11,9 +11,6 @@ $(function() {
   // Student Details Table
   let studentTable = $("#studentTable");
 
-  // Register button
-  let regBtn = $("#regBtn");
-
   // Display selected course details in table.
   $.getJSON("/api/courses/" + courseId, function(data) {
     let courses = data;
@@ -49,6 +46,7 @@ $(function() {
     courseTable.append(markup);
 
     // Displays Name and Email of any registered students in table.
+    // Creates buttons and URLs for delete button links
     for (let i = 0; i < courses.Students.length; i++) {
       let studentName = courses.Students[i].StudentName;
       let studentEmail = courses.Students[i].Email;
@@ -57,12 +55,25 @@ $(function() {
         studentName +
         "</td><td>" +
         studentEmail +
-        "</td><td><a class='btn btn-danger'>Delete</a></td></tr>";
+        "</td><td><a class='btn btn-danger delBtn" +
+        i +
+        "'>Delete</a></td></tr>";
       studentTable.append(studentMarkup);
+
+      // Delete button dynamic creation
+      $(".delBtn" + i).attr(
+        "href",
+        encodeURI("unregister.html?courseid=" +
+          classId +
+          "&StudentName=" +
+          studentName +
+          "&Email=" +
+          studentEmail)
+      );
     }
 
     // Brings user to Registration or Edit page with Course ID prefilled.
     $("#editBtn").attr("href", "editcourse.html?courseid=" + courseId);
-    regBtn.attr("href", "register.html?courseid=" + courseId);
+    $("#regBtn").attr("href", "register.html?courseid=" + courseId);
   });
 });

@@ -4,6 +4,7 @@ $(function() {
   $.getJSON("/api/categories", function(data) {
     let categories = data;
 
+    // Load categories into dropdown.
     for (let i = 0; i < categories.length; i++) {
       let catsAll = categories[i];
       let element = document.createElement("option");
@@ -87,7 +88,7 @@ $(function() {
     } else {
       alert("Sent!");
       $.post("api/courses", $("#courseAdd").serialize());
-      window.location.href = "courses.html"
+      window.location.href = "courses.html" //redirects after submit to courses.html
       return false;
     }
   }

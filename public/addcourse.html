@@ -31,6 +31,7 @@
       <div class="col-6 offset-3">
         <h2 class="text-center">Enter Course Details</h2>
 
+        <!-- Form begins -->
         <form id="courseAdd" method="POST" action="api/courses">
           <div class="form-group">
             <label for="courseid">Course ID:</label>
@@ -64,7 +65,6 @@
               class="form-control"
               name="category"
               id="coursecategory"
-              placeholder="Enter category"
             >
             </select>
           </div>
@@ -114,7 +114,8 @@
               name="meets"
               id="coursemeets"
               placeholder="Enter meeting days/times"
-            /><div id="coursemeetserror"></div>
+            />
+            <div id="coursemeetserror"></div>
           </div>
 
           <div class="form-group">
@@ -125,13 +126,13 @@
               name="fee"
               id="coursefee"
               placeholder="Enter course fee"
-            /><div id="coursefeeerror"></div>
+            />
+            <div id="coursefeeerror"></div>
           </div>
 
           <button type="button" id="caSubmitBtn" class="btn btn-success mt-2">
             Submit
           </button>
-          <div id="errors"></div>
         </form>
         <!-- Back to class details of class being viewed -->
         <a class="btn btn-warning py-3 mt-5" href="courses.html">
